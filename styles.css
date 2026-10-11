@@ -115,3 +115,8 @@ body::after{content:"";pointer-events:none;position:fixed;inset:0;z-index:10;opa
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @keyframes in-next{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes in-prev{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
 .feature-stage.motion-next .project-intro,.feature-stage.motion-next .visual-content{animation:in-next .6s var(--ease) both}.feature-stage.motion-prev .project-intro,.feature-stage.motion-prev .visual-content{animation:in-prev .6s var(--ease) both}
+
+/* Put the bottom control bar above the gallery's absolute visual layer.
+   Verified via real-browser hit testing: the gallery had been intercepting nav clicks. */
+.work-bottom{position:relative;z-index:8;background:var(--bg)}
+.work-controls,.arrow-button{position:relative;z-index:1}
