@@ -120,3 +120,22 @@ body::after{content:"";pointer-events:none;position:fixed;inset:0;z-index:10;opa
    Verified via real-browser hit testing: the gallery had been intercepting nav clicks. */
 .work-bottom{position:relative;z-index:8;background:var(--bg)}
 .work-controls,.arrow-button{position:relative;z-index:1}
+
+/* Visual covers remain visible until source screenshots have loaded;
+   this prevents blank frames on slow mobile connections. */
+.art-image img.art-screen{position:absolute;inset:0;z-index:2;opacity:0;transition:opacity .6s var(--ease)}
+.art-image.is-image-loaded img.art-screen{opacity:1}
+.cover-fallback{position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,7%,70px);font-family:var(--display);color:#dcece7}
+.cover-eyebrow{font:10px var(--mono);letter-spacing:.16em;color:#96b3a8;border-bottom:1px solid #ffffff32;padding:0 0 16px}
+.cover-fallback h3{font-size:clamp(44px,6vw,92px);line-height:.88;letter-spacing:-.075em;margin:clamp(24px,5%,48px) 0;font-weight:600}
+.cover-numbers{display:flex;gap:30px;border-top:1px solid #ffffff45;padding-top:13px}
+.cover-numbers span{display:flex;align-items:baseline;gap:10px}.cover-numbers b{font:600 clamp(36px,4vw,60px) var(--display);letter-spacing:-.08em}.cover-numbers small{font:10px var(--mono);color:#b6cebf}
+.cover-fallback p{font:10px/1.5 var(--mono);letter-spacing:.04em;margin:22px 0 0;color:#b4d2c5}.cover-fallback p em{font-style:normal;color:#ecd19e}
+.cover-siem{background:radial-gradient(circle at 100% 100%,#286357,transparent 58%),#0a2823}
+.cover-auditor{background:radial-gradient(circle at 100% 100%,#58427e,transparent 60%),#1d172e}.cover-auditor .cover-eyebrow,.cover-auditor p{color:#c6b8db}
+.cover-phishing{background:radial-gradient(circle at 100% 100%,#924f5c,transparent 60%),#331a23}.cover-phishing .cover-eyebrow,.cover-phishing p{color:#f3bdc9}
+@media(max-width:700px){
+  .cover-fallback{padding:8%}.cover-fallback h3{font-size:clamp(36px,10vw,62px);margin:18px 0}
+  .cover-eyebrow,.cover-fallback p,.cover-numbers small{font-size:8px}.cover-numbers b{font-size:33px}
+  .cover-numbers{gap:13px}.cover-numbers span{gap:6px}
+}
