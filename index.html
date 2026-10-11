@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101210">
+  <meta name="description" content="Selected work by Sai. Nine projects across creative coding, interactive experiences, security engineering, and web development.">
+  <meta property="og:title" content="Selected Work — Built by Sai">
+  <meta property="og:description" content="An interactive archive of things I've built.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://builtbysai.com/showcase/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Selected Work — Built by Sai</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="https://builtbysai.com/" aria-label="Built by Sai, back to main site">BUILT<span>BY</span>SAI<span class="wordmark-dot">.</span></a>
+    <div class="header-context"><span class="header-context-label">INDEX / 01</span> <span class="header-context-divider"></span> SELECTED WORK</div>
+    <a class="return-link" href="https://builtbysai.com/">MAIN SITE <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="showcase" id="showcase">
+    <div class="edge-note" aria-hidden="true">INDEPENDENT WORK <span>© 2026</span></div>
+    <section class="work-viewport" id="work-viewport" aria-labelledby="work-heading">
+      <div class="section-heading">
+        <div class="section-kicker"><span class="kicker-marker"></span> CURATED PROJECTS <span class="kicker-separator">/</span> <span id="section-total">09</span></div>
+        <p>DESIGNED & DEVELOPED BY SAI</p>
+      </div>
+      <div class="feature-stage" id="feature-stage">
+        <div class="project-intro" aria-live="polite" aria-atomic="true">
+          <span class="intro-count" id="intro-count">01 <span>/ 09</span></span>
+          <h1 class="project-title" id="work-heading">Interactive<br>Diploma</h1>
+          <p class="intro-desc" id="intro-desc">A full 3D, physically-lit recreation of my actual diploma. It's live. Drag it.</p>
+        </div>
+        <div class="visual-area" id="visual-area">
+          <div class="visual-underlay" aria-hidden="true"><span id="visual-word">01</span></div>
+          <button class="visual-frame" id="visual-frame" type="button" aria-label="Explore Interactive Diploma">
+            <div class="visual-content" id="visual-content"></div>
+            <span class="visual-corner visual-corner-tl"></span><span class="visual-corner visual-corner-tr"></span><span class="visual-corner visual-corner-bl"></span><span class="visual-corner visual-corner-br"></span>
+            <span class="visual-action"><span>OPEN CASE STUDY</span><span class="visual-action-arrow">↗</span></span>
+          </button>
+          <div class="visual-side" aria-hidden="true"><span class="side-line"></span><span>BUILT BY SAI</span><span class="side-line"></span></div>
+        </div>
+      </div>
+      <div class="work-bottom">
+        <div class="work-metadata">
+          <div class="meta-unit"><span class="meta-label">A / CATEGORY</span><strong id="meta-type">Creative / 3D</strong></div>
+          <div class="meta-unit"><span class="meta-label">B / BUILT WITH</span><strong id="meta-stack">Three.js</strong></div>
+          <div class="meta-unit"><span class="meta-label">C / STATE</span><strong id="meta-status">Fully interactive</strong></div>
+        </div>
+        <div class="work-controls" role="group" aria-label="Browse projects">
+          <button type="button" class="arrow-button" id="nav-prev" aria-label="Previous project"><span aria-hidden="true">←</span></button>
+          <div class="progress-meter"><div class="progress-track"><span id="progress-fill"></span></div><span class="progress-copy"><span id="progress-now">01</span> <span class="progress-slash">/</span> <span id="progress-end">09</span></span></div>
+          <button type="button" class="arrow-button" id="nav-next" aria-label="Next project"><span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div class="touch-hint">SWIPE TO EXPLORE <span aria-hidden="true">↔</span></div>
+    </section>
+    <nav class="project-index" id="project-index" aria-label="Jump to a project"></nav>
+  </main>
+  <footer class="site-footer"><span class="footer-left">© BUILTBYSAI <span class="footer-year">2026</span></span><span class="footer-middle">DRAG <span aria-hidden="true">↔</span> · SCROLL · ARROW KEYS</span><a href="https://github.com/builtbysai/" target="_blank" rel="noopener noreferrer">GITHUB <span aria-hidden="true">↗</span></a></footer>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <div class="dialog-header"><span class="dialog-wordmark">BUILTBYSAI / SELECTED WORK</span><span class="dialog-count" id="dialog-count">01 / 09</span><button type="button" class="dialog-close" id="dialog-close">CLOSE <span aria-hidden="true">×</span></button></div>
+      <div class="dialog-scroll" id="dialog-scroll">
+        <div class="dialog-lead"><p class="dialog-kicker" id="dialog-kicker">PROJECT / 01</p><h2 id="dialog-title">Interactive Diploma</h2><p class="dialog-summary" id="dialog-summary"></p><div class="dialog-facts"><div><span>TYPE</span><strong id="dialog-type"></strong></div><div><span>BUILT WITH</span><strong id="dialog-stack"></strong></div><div><span>STATUS</span><strong id="dialog-status"></strong></div></div></div>
+        <div class="dialog-media" id="dialog-media"></div>
+        <div class="dialog-copy" id="dialog-copy"></div>
+        <div class="dialog-bottom"><button type="button" id="dialog-prev" class="detail-nav">← PREVIOUS PROJECT</button><span id="dialog-position">01 / 09</span><button type="button" id="dialog-next" class="detail-nav">NEXT PROJECT →</button></div>
+      </div>
+    </div>
+  </dialog>
+  <script type="application/json" id="project-data">[{"id":"craft","title":"Interactive Diploma","type":"Creative / 3D","stack":"Three.js","status":"Fully interactive","abbr":"ID","bg":"#0c0906","ink":"#f4ecdf","accent":"#f0b429","thumb":"","hint":"A full 3D, physically-lit recreation of my actual diploma. It's live. Drag it."},{"id":"proj-siem","title":"Log Correlator SIEM","type":"Security tool","stack":"Python","status":"25 tests passing","abbr":"SIEM","bg":"#081413","ink":"#eafffb","accent":"#5eead4","thumb":"https://builtbysai.com/screenshots/log-correlator-siem.webp","hint":"Correlates sequences of events across two log sources into one incident, not two alerts."},{"id":"proj-helpdesk","title":"Helpdesk Ticket Analytics","type":"Analytics tool","stack":"Python","status":"14 tests passing","abbr":"HD","bg":"#e9edf1","ink":"#141b24","accent":"#285f8f","thumb":"","hint":"Turns a raw ticket export into SLA compliance, resolution-time, and volume metrics."},{"id":"proj-ad-auditor","title":"AD Security Auditor","type":"Security tool","stack":"PowerShell","status":"Pester tested","abbr":"AD","bg":"#0d0b14","ink":"#efeaff","accent":"#9d84e8","thumb":"https://builtbysai.com/screenshots/ad-security-auditor.webp","hint":"Audits Active Directory security posture entirely offline, from exported CSV data."},{"id":"proj-phishing","title":"Phishing Email Analyzer","type":"Security tool","stack":"Python","status":"46 tests passing","abbr":"PH","bg":"#160a0d","ink":"#ffe9ee","accent":"#e8748c","thumb":"https://builtbysai.com/screenshots/phishing-email-analyzer.webp","hint":"Statically analyzes raw .eml files for phishing indicators, fully offline."},{"id":"proj-jotrelay","title":"JotRelay","type":"Web app","stack":"JS / Supabase","status":"Live demo","abbr":"JR","bg":"#eef7f1","ink":"#0c1f15","accent":"#256f4a","thumb":"","hint":"Real-time encrypted collaborative notepad with shareable links and an installable PWA."},{"id":"proj-toolkit","title":"AD & Endpoint Automation Toolkit","type":"Automation","stack":"PowerShell","status":"PS 5.1 compatible","abbr":"EP","bg":"#170f08","ink":"#ffe9d1","accent":"#e2a35c","thumb":"","hint":"Provisioning, offboarding, and compliance scripts. Every write action supports -WhatIf."},{"id":"proj-winlog","title":"WinLog Threat Hunter","type":"Threat hunting","stack":"Python","status":"25 tests passing","abbr":"WL","bg":"#071316","ink":"#eafbff","accent":"#5fc9d8","thumb":"","hint":"Parses Windows Security/Sysmon events and maps findings to MITRE ATT&CK techniques."},{"id":"proj-ghostball","title":"Ghost Ball","type":"Browser game","stack":"Vanilla JS / Canvas","status":"Live demo","abbr":"GB","bg":"#0a1c12","ink":"#eaf3ea","accent":"#a3d97b","thumb":"","hint":"A browser pool game built around feel: the speed of your stroke is the speed of the shot."}]</script>
+  <template id="source-case-studies">
+
+    <div class="proj-source" data-project="craft">
+      <div class="scene-media">
+        <div class="live-embed diploma">
+          <div class="lf-bar" aria-hidden="true">
+            <span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span>
+            <span class="lf-title">interactive-diploma &middot; live</span>
+            <span class="lf-hint">drag to rotate &middot; scroll to zoom</span>
+          </div>
+          <iframe src="https://builtbysai.github.io/interactive-diploma/" title="Interactive Diploma &middot; live 3D demo, drag to rotate" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="lf-overlay" role="button" tabindex="0" aria-label="Activate live 3D diploma: click to drag and zoom">
+            <span class="lf-overlay-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg>
+              Click to drag &amp; zoom
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Everything else here solves a problem nobody outside IT ever sees. This one didn't need to exist: a full 3D, physically-lit recreation of my actual Liberty University diploma, procedural paper and card materials, studio lighting, a folder that opens on drag. Built to prove I can ship something visual, not just backend tooling. It's live. Drag it.</p>
+        <div class="feature-stats">
+          <span class="chip">Three.js</span>
+          <span class="chip">Procedural materials</span>
+          <span class="chip">Studio lighting</span>
+          <span class="chip">Fully interactive</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://builtbysai.github.io/interactive-diploma/" target="_blank" rel="noopener">Open full demo</a>
+          <a href="https://github.com/builtbysai/interactive-diploma" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-siem">
+      <div class="scene-media">
+        <img src="https://builtbysai.com/screenshots/log-correlator-siem.webp" alt="Log Correlator SIEM dashboard: 34 events ingested, 5 incidents, MITRE ATT&amp;CK techniques observed" loading="lazy" width="1200" height="780">
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Most portfolio "SIEM" projects flag one log line at a time. This one correlates <em>sequences</em> of events across two different log sources: a burst of failed SSH logins immediately followed by a successful one from the same IP is treated as one escalated incident, not two unrelated alerts, mirroring how a real detection-engineering rule chain works. Five rules, each mapped to a MITRE ATT&amp;CK technique ID; zero runtime dependencies; renders as a self-contained HTML dashboard with no build step.</p>
+        <div class="feature-flow" aria-hidden="true">
+          <span class="flow-node">auth.log</span>
+          <span class="flow-arrow">+</span>
+          <span class="flow-node">firewall.csv</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-node accent">correlator.py</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-node">ATT&amp;CK-mapped incidents</span>
+          <span class="flow-arrow">&rarr;</span>
+          <span class="flow-node">HTML dashboard</span>
+        </div>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">I don't have a live SOC seat yet, so I couldn't point to a real correlation rule I'd shipped. This was my way of proving the thinking anyway: don't just flag a suspicious line, chain it to what came before it, the way an actual detection engineer reads a timeline. If I can't show the seat, I can show the reasoning.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">5 correlation rules</span>
+          <span class="chip">25 tests passing</span>
+          <span class="chip">MITRE ATT&amp;CK mapped</span>
+          <span class="chip">Zero dependencies</span>
+          <span class="chip">Cross-source correlation</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://builtbysai.github.io/log-correlator-siem/" target="_blank" rel="noopener">Live dashboard</a>
+          <a href="https://github.com/builtbysai/log-correlator-siem" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-helpdesk">
+      <div class="scene-media">
+        <div class="chart-panel">
+          <svg viewBox="0 0 640 170" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" style="width:100%;height:auto;display:block;">
+            <text x="0" y="18" font-size="13" font-weight="600" fill="#e7edf5">SLA compliance by priority</text>
+            <text x="0" y="50" font-size="12" fill="#93a1b4">Low</text>
+            <rect x="140" y="34" width="440" height="22" rx="3" fill="#1c2634" />
+            <rect x="140" y="34" width="440" height="22" rx="3" fill="#5eead4" />
+            <text x="590" y="50" font-size="11" fill="#e7edf5">100%</text>
+            <text x="0" y="82" font-size="12" fill="#93a1b4">High</text>
+            <rect x="140" y="66" width="440" height="22" rx="3" fill="#1c2634" />
+            <rect x="140" y="66" width="357" height="22" rx="3" fill="#5eead4" />
+            <text x="590" y="82" font-size="11" fill="#e7edf5">81.2%</text>
+            <text x="0" y="114" font-size="12" fill="#93a1b4">Medium</text>
+            <rect x="140" y="98" width="440" height="22" rx="3" fill="#1c2634" />
+            <rect x="140" y="98" width="440" height="22" rx="3" fill="#5eead4" />
+            <text x="590" y="114" font-size="11" fill="#e7edf5">100%</text>
+            <text x="0" y="146" font-size="12" fill="#93a1b4">Critical</text>
+            <rect x="140" y="130" width="440" height="22" rx="3" fill="#1c2634" />
+            <rect x="140" y="130" width="409" height="22" rx="3" fill="#5eead4" />
+            <text x="590" y="146" font-size="11" fill="#e7edf5">92.9%</text>
+          </svg>
+          <p class="chart-cap">Live chart from the tool's own inline-SVG report generator, rendered from a 620-ticket sample dataset. No image file.</p>
+        </div>
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Turns a raw ticket export into SLA compliance, resolution-time, and volume metrics, mirroring real high-volume ticket queue work (1,000+ tickets/year). Zero dependencies; renders its own charts as inline SVG.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">Twelve to fifteen tickets a day adds up to thousands a year, and I kept asking the same question nobody was answering: which priority tier is actually missing SLA, and by how much? This is that answer, generated in seconds instead of guessed at.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">14 tests passing</span>
+          <span class="chip">Zero dependencies</span>
+          <span class="chip">HTML + CSV reports</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/builtbysai/helpdesk-ticket-analytics" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-ad-auditor">
+      <div class="scene-media">
+        <img src="https://builtbysai.com/screenshots/ad-security-auditor.webp" alt="AD Security Auditor HTML report: 16 findings, 4 critical, 5 high, 7 medium" loading="lazy" width="1200" height="708">
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Audits Active Directory security posture entirely offline, from exported CSV data: stale accounts, password hygiene, unapproved privileged-group membership, outdated OS versions, and duplicate SPNs. No live domain connection required. Renders a dark-themed HTML report plus CSV/JSON export.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">I administer a real production AD environment, so I know exactly how easy it is for a stale account or a privileged-group change to go unnoticed. I wanted an audit I could hand to anyone without touching the live domain: export, run, read the findings.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">Pester tested</span>
+          <span class="chip">7 security checks</span>
+          <span class="chip">Read-only / offline</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/builtbysai/ad-security-auditor" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-phishing">
+      <div class="scene-media">
+        <img src="https://builtbysai.com/screenshots/phishing-email-analyzer.webp" alt="Phishing Email Analyzer report flagging a critical-risk message with SPF, DKIM, and DMARC failures" loading="lazy" width="1200" height="678">
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Statically analyzes raw .eml files for phishing indicators: SPF/DKIM/DMARC failures, lookalike and homoglyph domains, link-text/href mismatches, urgency language, and double-extension executables. Weighted score with plain-language explanations. Fully offline, never visits links or executes attachments.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">Phishing reports land in every help desk queue, and "just don't click it" isn't an explanation. I wanted something that shows its work: which header failed, which domain is spoofed, in plain language, so the answer teaches the reader something instead of just flagging risk.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">46 tests passing</span>
+          <span class="chip">Zero dependencies</span>
+          <span class="chip">Offline / no network calls</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/builtbysai/phishing-email-analyzer" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-jotrelay">
+      <div class="scene-media">
+        <div class="live-embed jotrelay">
+          <div class="lf-bar" aria-hidden="true">
+            <span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span>
+            <span class="lf-title">jotrelay.github.io &middot; live</span>
+            <span class="lf-hint">real app, not a screenshot</span>
+          </div>
+          <iframe src="https://builtbysai.github.io/JotRelay/" title="JotRelay &middot; live app preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="lf-overlay" role="button" tabindex="0" aria-label="Activate live JotRelay preview">
+            <span class="lf-overlay-badge">Click to interact</span>
+          </div>
+        </div>
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Real-time encrypted collaborative notepad: shareable editable or read-only links, QR codes, presence and typing indicators, offline drafts, and a PWA install with an OS-level share target. Vanilla JS, no framework or build step.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">Everything else here is backend tooling nobody outside IT ever sees. I wanted to prove I can also ship something a stranger opens, understands in five seconds, and actually wants to use, encryption included, because "real-time" and "private" shouldn't be a trade-off.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">Live demo</span>
+          <span class="chip">Encryption option</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://builtbysai.github.io/JotRelay/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/builtbysai/JotRelay" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-toolkit">
+      <div class="scene-media">
+        <div class="term-panel">
+          <div class="term-topbar" aria-hidden="true">
+            <span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span>
+            <span class="term-cmdline">PS&gt; .\Disable-InactiveADUsers.ps1 -InactiveDays 90 -ReportOnly</span>
+          </div>
+          <pre><span class="term-dim">Scanning 214 enabled accounts for LastLogonTimestamp older than 90 days...</span>
+
+<span class="term-hd">What if:</span> Performing the operation "Disable AD Account" on target "jsmith (OU=Sales,DC=corp,DC=local)".
+<span class="term-hd">What if:</span> Performing the operation "Disable AD Account" on target "r.chen (OU=Support,DC=corp,DC=local)".
+<span class="term-dim">... 10 more, see report ...</span>
+
+<span class="term-accent">12 accounts</span> flagged inactive &middot; <span class="term-hd">0</span> disabled (-ReportOnly) &middot; report written to <span class="term-dim">reports\inactive-2026-08-31.csv</span></pre>
+          <p class="chart-cap">Representative -WhatIf/-ReportOnly console output, formatted to match the script's real logging module. It targets a live AD domain, so this isn't a hosted demo.</p>
+        </div>
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Scripts for AD user provisioning/offboarding, stale-account cleanup, hygiene reporting, and endpoint compliance audits. Every write action supports -WhatIf; every run produces a log and CSV report.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">Provisioning and offboarding by hand is repetitive, which means it's exactly where mistakes happen. Every write action here defaults to -WhatIf first, because I wanted automation I'd actually trust against a real domain, not a script that just moves the risk somewhere less visible.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">SupportsShouldProcess</span>
+          <span class="chip">PS 5.1 compatible</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/builtbysai/ad-automation-toolkit" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-source" data-project="proj-winlog">
+      <div class="scene-media">
+        <div class="term-panel">
+          <div class="term-topbar" aria-hidden="true">
+            <span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span>
+            <span class="term-cmdline">$ python -m winlog_threat_hunter.cli sample_logs/brute_force_attack.jsonl</span>
+          </div>
+          <pre><span class="term-hd">WinLog Threat Hunter</span> <span class="term-dim">: analyzed 9 events, 3 finding(s)</span>
+<span class="sev-crit">CRITICAL: 2</span>   <span class="sev-high">HIGH: 1</span>
+
+<span class="sev-crit">[CRITICAL]</span> Repeated failed logons (brute force / password spray), followed by success
+  <span class="term-dim">rule: BRUTE-001 &middot; mitre: T1110 &middot; who: WIN-VPN01 / 45.33.12.7</span>
+  7 failed logons in 6 min, then a success from the same source: likely compromise, not a blocked attempt.
+
+<span class="sev-high">[HIGH]</span> Special privileges assigned following a notable interactive logon
+  <span class="term-dim">rule: PRIVESC-001 &middot; mitre: T1078 &middot; who: svc_backup / WIN-VPN01</span></pre>
+          <p class="chart-cap">Real output from the tool, run against its own bundled sample_logs/brute_force_attack.jsonl dataset, not staged.</p>
+        </div>
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">Parses exported Windows Security/Sysmon events and flags brute-force logons, privilege escalation, suspicious command lines, and admin-persistence patterns, each mapped to a MITRE ATT&amp;CK technique.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">Raw Windows Security logs are enormous and mostly noise. I wanted practice turning that noise into named attacker behavior, mapped to ATT&amp;CK and not just "suspicious event #4471", because that translation is most of what a threat hunter actually does.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">25 tests passing</span>
+          <span class="chip">MITRE ATT&amp;CK mapped</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://github.com/builtbysai/winlog-threat-hunter" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-source" data-project="proj-ghostball">
+      <div class="scene-media">
+        <div class="live-embed ghostball">
+          <div class="lf-bar" aria-hidden="true">
+            <span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span>
+            <span class="lf-title">ghost-ball &middot; live</span>
+            <span class="lf-hint">real game, not a screenshot</span>
+          </div>
+          <iframe src="https://builtbysai.com/Ghost-Ball/" title="Ghost Ball &middot; live pool game" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="lf-overlay" role="button" tabindex="0" aria-label="Activate live Ghost Ball game">
+            <span class="lf-overlay-badge">Click to play</span>
+          </div>
+        </div>
+      </div>
+      <div class="scene-detail-copy">
+        <p class="feature-desc">A browser pool game built around feel: stroke the cue with mouse, finger, or controller stick, and the speed of your stroke is the speed of the shot. Real spin, throw, and cushion physics across five halls from pool's history, a fifteen-rival career Circuit, sixteen trick shots, a daily run, and online tables you host with a six-character code. Vanilla JavaScript on a canvas: no framework, no build step, no accounts.</p>
+        <details class="why">
+          <summary>Why I built this</summary>
+          <p class="why-body">Every pool video game I tried missed the one thing that matters: the stroke. So I built the game around your hand on the cue, kept the physics honest, and left out everything I dislike: no timers pressuring you, nothing for sale, everything you unlock earned by playing.</p>
+        </details>
+        <div class="feature-stats">
+          <span class="chip">Live demo</span>
+          <span class="chip">Online play</span>
+          <span class="chip">Installable PWA</span>
+        </div>
+        <div class="feature-links">
+          <a href="https://builtbysai.com/Ghost-Ball/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/builtbysai/Ghost-Ball" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="./app.js" defer></script>
+  <noscript><section class="noscript"><h2>Selected work</h2><p>JavaScript is required for the interactive gallery. Individual project links:</p><ol><li><a href="https://github.com/builtbysai/">Interactive Diploma</a></li><li><a href="https://github.com/builtbysai/">Log Correlator SIEM</a></li><li><a href="https://github.com/builtbysai/">Helpdesk Ticket Analytics</a></li><li><a href="https://github.com/builtbysai/">AD Security Auditor</a></li><li><a href="https://github.com/builtbysai/">Phishing Email Analyzer</a></li><li><a href="https://github.com/builtbysai/">JotRelay</a></li><li><a href="https://github.com/builtbysai/">AD &amp; Endpoint Automation Toolkit</a></li><li><a href="https://github.com/builtbysai/">WinLog Threat Hunter</a></li><li><a href="https://github.com/builtbysai/">Ghost Ball</a></li></ol></section></noscript>
+</body>
+</html>
