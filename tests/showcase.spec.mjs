@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test';
+import {mkdir} from 'node:fs/promises';
 
 test('gallery navigation, modal and history work in a real browser', async ({page}) => {
   await page.goto('/');
@@ -36,7 +37,8 @@ for (const viewport of [
   test(`visible and navigable at ${viewport.name} size`, async ({page}) => {
     await page.setViewportSize({width:viewport.width,height:viewport.height});
     await page.goto('/');
-    await page.locator('img.art-screen').first().waitFor({state:'attached'}).catch(() => {});
+    await mkdir('artifacts', {recursive:true});
+    await page.screenshot({path:`artifacts/showcase-initial-${viewport.name}.png`,fullPage:true,animations:'disabled'});
     await expect(page.locator('#visual-frame')).toBeVisible();
     await expect(page.getByRole('button',{name:'Next project'})).toBeVisible();
     await page.getByRole('button',{name:'Next project'}).click();
