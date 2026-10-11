@@ -38,16 +38,22 @@
   let busyNavigating = false;
 
   const artwork = {
-    craft: () => `<div class="art art-diploma"><div class="diploma-folder"><div class="diploma-paper"><span class="diploma-seal">LU</span><small>LIBERTY UNIVERSITY</small><b>Certificate<br>of Achievement</b><span class="diploma-line"></span><i>Inspired by a live Three.js recreation</i></div></div></div>`,
+    craft: () => `<div class="art art-diploma"><div class="diploma-folder"><div class="diploma-paper"><span class="diploma-seal">LU</span><small>LIBERTY UNIVERSITY</small><b>Bachelor<br>of Science</b><span class="diploma-line"></span><i>Computer Science · Three.js</i></div></div></div>`,
     'proj-helpdesk': () => `<div class="art art-dashboard"><div class="dashboard-window"><div class="dashboard-side"><i></i><i></i><i></i><i></i><i></i></div><div class="dashboard-panel"><div class="dashboard-heading">Ticket performance</div><div class="dashboard-metrics"><span>620</span><span>92%</span><span>4.8h</span></div><div class="dashboard-bars"><span style="--bar-width:91%"></span><span style="--bar-width:73%"></span><span style="--bar-width:84%"></span><span style="--bar-width:49%"></span><span style="--bar-width:66%"></span></div></div></div></div>`,
     'proj-jotrelay': () => `<div class="art art-jotrelay"><div class="notepad-back"></div><div class="notepad-sheet"><b>Jot<br>Relay<span style="color:#8aaa82">.</span></b><i></i><i></i><i></i><i></i></div><div class="notepad-mark">WRITE / SHARE / SYNC</div></div>`,
     'proj-toolkit': () => `<div class="art art-terminal"><div class="terminal-window"><div class="terminal-dots"><i></i><i></i><i></i></div><div><span class="prompt">PS C:\\&gt;</span> .\\Invoke-EndpointAudit.ps1</div><div class="t-mute"># AD &amp; Endpoint Automation</div><div><span class="t-ok">✓</span> Configuration validated</div><div><span class="t-ok">✓</span> 12 devices scanned</div><div class="t-mute">WhatIf: changes not applied</div><div><span class="prompt">PS C:\\&gt;</span> _</div></div></div>`,
     'proj-winlog': () => `<div class="art art-terminal art-threat"><div class="terminal-window"><div class="terminal-dots"><i></i><i></i><i></i></div><div><span class="prompt">~/threat-hunter $</span> scan --events</div><div class="t-mute">Windows Security / Sysmon</div><div><span class="t-ok">[+] </span>9 events analyzed</div><div style="color:#f0a392">[CRITICAL] Repeated failed logons</div><div class="t-mute">MITRE ATT&amp;CK : T1110</div><div style="color:#f5d08a">[HIGH] Privilege escalation</div><div class="t-mute">MITRE ATT&amp;CK : T1078</div></div></div>`,
     'proj-ghostball': () => `<div class="art art-pool"><div class="pool-wood"><span class="pool-cue"></span><span class="pool-ball white" style="top:68%;left:24%"></span><span class="pool-ball" style="top:29%;left:64%"></span><span class="pool-ball red" style="top:35%;left:69%"></span><span class="pool-ball blue" style="top:41%;left:64%"></span><span class="pool-ball black" style="top:47%;left:69%"></span><span class="pool-ball" style="top:53%;left:64%"></span><span class="pool-ball red" style="top:41%;left:74%"></span></div></div>`
   };
+  function makePreviewFallback(project) {
+    if (project.id === 'proj-siem') return `<div class="cover-fallback cover-siem"><span class="cover-eyebrow">DETECTION / CORRELATION</span><h3>Incidents,<br>not alerts.</h3><div class="cover-numbers"><span><b>34</b><small>EVENTS</small></span><span><b>05</b><small>INCIDENTS</small></span></div><p>AUTH.LOG <em>→</em> CORRELATION <em>→</em> MITRE ATT&amp;CK</p></div>`;
+    if (project.id === 'proj-ad-auditor') return `<div class="cover-fallback cover-auditor"><span class="cover-eyebrow">ACTIVE DIRECTORY / SECURITY</span><h3>Security<br>posture.</h3><div class="cover-numbers"><span><b>16</b><small>FINDINGS</small></span></div><p>04 CRITICAL <em>/</em> 05 HIGH <em>/</em> 07 MEDIUM</p></div>`;
+    if (project.id === 'proj-phishing') return `<div class="cover-fallback cover-phishing"><span class="cover-eyebrow">EMAIL / STATIC ANALYSIS</span><h3>Critical<br>risk.</h3><div class="cover-numbers"><span><b>03</b><small>AUTHENTICATION CHECKS</small></span></div><p>SPF <em>FAIL</em> &nbsp; DKIM <em>FAIL</em> &nbsp; DMARC <em>FAIL</em></p></div>`;
+    return '';
+  }
   function makeArtwork(project) {
     if (project.thumb) {
-      return `<div class="art art-image"><img class="art-screen" src="${esc(project.thumb)}" alt="" loading="eager" decoding="async"></div>`;
+      return `<div class="art art-image">${makePreviewFallback(project)}<img class="art-screen" src="${esc(project.thumb)}" alt="" loading="eager" decoding="async"></div>`;
     }
     return artwork[project.id]?.() || `<div class="art art-terminal"><div class="terminal-window"><div class="terminal-dots"><i></i><i></i><i></i></div>${esc(project.title)}</div></div>`;
   }
@@ -91,9 +97,12 @@
     art.innerHTML = makeArtwork(project);
     // Use a meaningful text treatment if a portfolio image disappears from the origin.
     const image = $('img.art-screen', art);
-    if (image) image.addEventListener('error', () => {
-      art.innerHTML = `<div class="art art-terminal"><div class="terminal-window"><div class="terminal-dots"><i></i><i></i><i></i></div><span class="t-mute">PROJECT / ${formatted}</span><div>${esc(project.title)}</div><div class="t-ok">${esc(project.type)} · ${esc(project.stack)}</div></div></div>`;
-    }, {once: true});
+    if (image) {
+      const reveal = () => image.closest('.art-image')?.classList.add('is-image-loaded');
+      if (image.complete && image.naturalWidth > 0) reveal();
+      else image.addEventListener('load', reveal, {once:true});
+      // If the original screenshot is unavailable, the authored cover remains visible.
+    }
     Array.from(rail.children).forEach((button, i) => {
       const active = i === next;
       button.classList.toggle('is-active', active);
